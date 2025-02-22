@@ -1,6 +1,6 @@
 const fileInput=document.getElementById("foto");
 const imageOutput=document.getElementById("foto-perfil");
-const quitarFil=document.getElementById("quitarFil");
+const removeButton=document.getElementById("removeButton");
 
 // Muestra la imagen predeterminada al cargar la página
 window.onload=()=>{
@@ -15,7 +15,7 @@ fileInput.addEventListener("change", ()=>{
         reader.onload=(e) =>{
             imageOutput.src=e.target.result;
             imageOutput.style.display="block"; 
-            quitarFil.style.display="inline";
+            removeButton.style.display="inline";
         };
         reader.onerror=(err) =>{
             console.error("Error al leer el archivo:", err);
@@ -26,11 +26,11 @@ fileInput.addEventListener("change", ()=>{
 });
 
 // Función para eliminar la imagen
-quitarFil.addEventListener("click", () =>{
+removeButton.addEventListener("click", () =>{
     imageOutput.src="perfil.jpg"; 
     imageOutput.style.display="block"; 
     fileInput.value=" "; 
-    quitarFil.style.display="inline"; 
+    removeButton.style.display="inline"; 
 });
 
 function editPerfil(){
