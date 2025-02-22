@@ -2,88 +2,88 @@ body {
     font-family: 'Arial', sans-serif;
     display: flex;
     justify-content: center;
-    align-items: flex-start; 
+    align-items: flex-start; /* Alinea el contenedor en la parte superior */
     height: 100vh;
-    background-color: #f4f4f4; 
-    padding: 20px; 
+    background-color: #f4f4f4; /* Color de fondo más suave */
+    padding: 20px; /* Espacio alrededor del contenedor */
 }
 
 .container {
     display: flex;
-    flex-direction: column; 
-    align-items: center; 
-    text-align: justify; 
-    background-color: #ffffff; 
-    padding: 30px; 
-    border-radius: 10px; 
-    max-width: 600px; 
-    max-height: 80vh; 
-    overflow-y: auto; 
+    flex-direction: column; /* Alinea los elementos en una columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    text-align: justify; /* Alinea el texto a la izquierda */
+    background-color: #ffffff; /* Fondo blanco para el contenedor */
+    padding: 30px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    max-width: 600px; /* Ancho máximo */
+    max-height: 80vh; /* Altura máxima */
+    overflow-y: auto; /* Desplazamiento vertical si el contenido excede la altura */
 }  
 
-.perfil {
-    text-align: center; 
-    background-color: #f9f9f9; 
+.profile {
+    text-align: center; /* Centra la imagen y el texto alternativo */
+    background-color: #f9f9f9; /* Fondo ligeramente gris para la sección de perfil */
     padding: 20px;
     border-radius: 10px;
-    margin-bottom: 20px; 
+    margin-bottom: 20px; /* Espacio entre el perfil y las secciones */
 }
 
 #foto-perfil {
-    max-width: 150px; 
-    max-height: 150px; 
-    border-radius: 10%; 
-    object-fit: cover; 
-    display: block; 
-    margin: 0 auto; 
+    max-width: 150px; /* Tamaño máximo de la imagen */
+    max-height: 150px; /* Altura máxima de la imagen */
+    border-radius: 10%; /* Hace que la imagen sea circular */
+    object-fit: cover; /* Asegura que la imagen se ajuste sin distorsionarse */
+    display: block; /* Asegura que la imagen se comporte como un bloque */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
 }
 
-#removeButton{
+#elimFoto{
     margin-top: 10px;
 }
 
-.seccion {
-    margin-top: 20px; 
-    width: 100%; 
-    padding: 10px; 
-    border: 1px solid #e0e0e0; 
-    border-radius: 5px; 
-    background-color: #ffffff; 
+.section {
+    margin-top: 20px; /* Espacio entre secciones */
+    width: 100%; /* Asegúrate de que ocupe todo el ancho del contenedor */
+    padding: 10px; /* Espaciado interno */
+    border: 1px solid #e0e0e0; /* Borde sutil */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #ffffff; /* Fondo blanco para las secciones */
 }
 
-.seccion h2 {
+.section h2 {
     margin-bottom: 10px;
-    color: #333; 
-    font-size: 1.5em; 
+    color: #333; /* Color del texto del encabezado */
+    font-size: 1.5em; /* Tamaño de fuente más grande para los encabezados */
 }
 
 ul {
-    list-style-type: none; 
-    padding: 0; 
+    list-style-type: none; /* Sin viñetas */
+    padding: 0; /* Sin padding */
 }
 
 li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 0; 
-    border-bottom: 1px solid #e0e0e0; 
+    padding: 5px 0; /* Espaciado entre elementos de la lista */
+    border-bottom: 1px solid #e0e0e0; /* Línea divisoria entre elementos */
 }
 
 li:last-child {
-    border-bottom: none; 
+    border-bottom: none; /* Elimina la línea divisoria del último elemento */
 }
 
 button {
     margin-left: 10px;
-    background-color: #007bff; 
-    color: white; 
-    border: none; 
-    border-radius: 5px; 
-    padding: 5px 10px; 
+    background-color: #007bff; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 5px 10px; /* Espaciado interno del botón */
     cursor: pointer; 
 }
 
 button:hover {
-    background-color: #1e74d0; /* Color de fondo al pasar el mouse */
+    background-color: #1e74d0; 
 }
