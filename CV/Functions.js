@@ -1,11 +1,11 @@
 const fileInput=document.getElementById("foto");
 const imageOutput=document.getElementById("foto-perfil");
-const removeButton=document.getElementById("removeButton");
+const quitarFil=document.getElementById("quitarFil");
 
 // Muestra la imagen predeterminada al cargar la página
 window.onload=()=>{
     imageOutput.src="perfil.jpg"; 
-    removeButton.style.display="inline"; 
+    quitarFil.style.display="inline"; 
 };
 
 fileInput.addEventListener("change", ()=>{
@@ -15,7 +15,7 @@ fileInput.addEventListener("change", ()=>{
         reader.onload=(e) =>{
             imageOutput.src=e.target.result;
             imageOutput.style.display="block"; 
-            removeButton.style.display="inline";
+            quitarFil.style.display="inline";
         };
         reader.onerror=(err) =>{
             console.error("Error al leer el archivo:", err);
@@ -26,11 +26,11 @@ fileInput.addEventListener("change", ()=>{
 });
 
 // Función para eliminar la imagen
-removeButton.addEventListener("click", () =>{
+quitarFil.addEventListener("click", () =>{
     imageOutput.src="perfil.jpg"; 
     imageOutput.style.display="block"; 
     fileInput.value=" "; 
-    removeButton.style.display="inline"; 
+    quitarFil.style.display="inline"; 
 });
 
 function editPerfil(){
@@ -46,7 +46,7 @@ function agregarAcademic(){
     if (value) {
         const li=document.createElement("li");
         li.innerText=value;
-        li.appendChild(createDeleteButton(li));
+        li.appendChild(crearBotElim(li));
         document.getElementById("historia-academica").appendChild(li);
         input.value=' '; 
     }
@@ -58,7 +58,7 @@ function agregarLab(){
     if (value){
         const li=document.createElement("li");
         li.innerText=value;
-        li.appendChild(createDeleteButton(li));
+        li.appendChild(crearBotElim(li));
         document.getElementById("historia-laboral").appendChild(li);
         input.value=' ';
     }
@@ -70,18 +70,18 @@ function agregarHab(){
     if (value){
         const li=document.createElement("li");
         li.innerText=value;
-        li.appendChild(createDeleteButton(li));
+        li.appendChild(crearBotElim(li));
         document.getElementById("habilidades").appendChild(li);
         input.value=' ';
     }
 }
 
-function removeItem(button){
+function quitarFil(button){
     const li=button.parentElement; 
     li.remove(); 
 }
 
-function createDeleteButton(listItem){
+function crearBotElim(listItem){
     const button=document.createElement("button");
     button.innerText="Eliminar";
     button.onclick=function(){
