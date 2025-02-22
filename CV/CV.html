@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css">
+    <title>Hoja de Vida</title>
+</head>
+<body>
+    <div class="container">
+        <div class="profile">
+            <input type="file" id="foto" accept="image/*">
+            <img id="profile-pic" src="perfil.jpg" alt="Foto de perfil"> <!-- Asegúrate de que este archivo exista -->
+            <button id="removeButton">Eliminar Imagen</button>
+
+            <h1 id="title">ERIKA MUÑOZ ZUÑIGA</h1>
+            <p id="description">Mi objetivo profesional es desarrollar mis conocimientos y 
+                aptitudes con una perspectiva de mejoramiento a largo plazo, 
+                para el buen desempeño de las funciones asignadas y hacerlo de 
+                manera organizada con las actitudes adecuadas.</p>
+            <button onclick="editProfile()">Editar Perfil</button>
+        </div>
+
+        <div class="section">
+            <h2>Historial Académico</h2>
+            <ul id="academic-history">
+                <li>Educación Superior (Cursando) - Universidad Santiado de Cali <button onclick="removeItem(this)">Eliminar</button></li>
+                <li>Técnico en Manejo Ambiental - Servicio Nacional de Aprendizaje (SENA) <button onclick="removeItem(this)">Eliminar</button></li>
+                <li>Educación Media - I.E. Nuestra Señora del Palmar <button onclick="removeItem(this)">Eliminar</button></li>
+            </ul>
+            <input type="text" id="academic-input" placeholder="Agregar historial académico">
+            <button onclick="addAcademic()">Agregar</button>
+        </div>
+
+        <div class="section">
+            <h2>Historial Laboral</h2>
+            <ul id="work-history">
+                <li>Atención al cliente - Ferretería los Constructores <button onclick="removeItem(this)">Eliminar</button></li> <!-- Elemento predefinido -->
+                <li>Ventas y cajera - Ferretería los Constructores <button onclick="removeItem(this)">Eliminar</button></li>
+            </ul>
+            <input type="text" id="work-input" placeholder="Agregar historial laboral">
+            <button onclick="addWork()">Agregar</button>
+        </div>
+
+        <div class="section">
+            <h2>Habilidades</h2>
+            <ul id="skills">
+                <li>Manejo de herramientas ofimáticas<button onclick="removeItem(this)">Eliminar</button></li> <!-- Elemento predefinido -->
+                <li>Comunicación interpersonal y escrita<button onclick="removeItem(this)">Eliminar</button></li>
+                <li>Iniciativa<button onclick="removeItem(this)">Eliminar</button></li>
+                <li>Liderazgo<button onclick="removeItem(this)">Eliminar</button></li>
+                <li>Trabajo en equipo<button onclick="removeItem(this)">Eliminar</button></li>
+                <li>Puntualidad<button onclick="removeItem(this)">Eliminar</button></li>
+
+            </ul>
+            <input type="text" id="skills-input" placeholder="Agregar habilidad">
+            <button onclick="addSkill()">Agregar</button>
+        </div>
+    </div>
+
+    <script src="Functions.js"></script>
+</body>
+</html>
